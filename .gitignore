@@ -6,5 +6,5 @@
 *.pyc
 local_settings.py
 *.sqlite3
-migrations/
 website/media/*
+*__pycache_*
