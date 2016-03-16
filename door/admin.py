@@ -1,14 +1,14 @@
 from django.contrib import admin
-from .models import DoorStatus, OpenData
 
-@admin.register(DoorStatus)
-class DoorStatusAdmin(admin.ModelAdmin):
+from .models import Door, DoorData
+
+
+@admin.register(Door)
+class DoorAdmin(admin.ModelAdmin):
     fieldsets = [
         ('Status', {
             'fields': [
                 'name',
-                'datetime',
-                'status',
             ]
         })
     ]
@@ -16,8 +16,9 @@ class DoorStatusAdmin(admin.ModelAdmin):
         'title'
     ]
 
-@admin.register(OpenData)
-class OpenDataAdmin(admin.ModelAdmin):
+
+@admin.register(DoorData)
+class DoorDataAdmin(admin.ModelAdmin):
     fieldsets = [
         ('Data', {
             'fields': [
